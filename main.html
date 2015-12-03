@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="css/addon/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/addon/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/addon/jquery-ui.structure.css">
+<script type="text/javascript" src="js/addon/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/addon/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/addon/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Renfe</title>
+</head>
+<body>
+<div class="container-fluid">
+  	<div id="header" class="row">
+  		<div>
+  			<a href=""><img id="home_logo" src="image/logo.png"></a>
+  		</div>
+	</div>
+	<div id="menu" class="row">
+		<div id="menu_body">
+			<ul id="menu_list">
+				<li><a class="btn" role="button" data-toggle="collapse" href="#buying_container" aria-expanded="false" aria-controls="collapseExample">Buy</a></li>
+				<li id="menu_manage" role="presentation" class="dropdown">
+			   	 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Manage<span class="caret"></span>
+			    </a>
+				    <ul class="dropdown-menu">
+				      <li><a href="">Change</a></li>
+				      <li><a href="">Cancellations</a></li>
+				      <li><a href="">Multiple Purchase</a></li>
+				      <li><a href="">Add Child under 4 Years Old</a></li>
+				      <li><a href="">Ave Ticket/Rail Passes</a></li>
+				      <li><a href="">Invoice</a></li>
+				      
+				    </ul>
+			    </li>
+				<li>Schedule</li>
+				<li>Help</li>
+			</ul>
+		</div>
+	</div>
+	<!--Buying Page Slide-->
+	<div id="buying_container" class="collapse row">
+	  <div id="buying_body" class="well">
+	  	<!--Buying Page Content-->
+	  </div>
+	</div>
+	<div id="body" class="row">
+		<!-- Body Slider -->
+		<div id="slider_container">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+			  </ol>
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+			    <div class="item active">
+			      <img src="image/home/Home_cyberweek2015.jpg" alt="...">
+			      <div class="carousel-caption">
+			        ...
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img src="image/home/Home_paypal.jpg" alt="...">
+			      <div class="carousel-caption">
+			        ...
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img src="image/home/Home_nuestraspromociones01.jpg" alt="...">
+			      <div class="carousel-caption">
+			        ...
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img src="image/home/Home_bonoavecolaborativo.jpg" alt="...">
+			      <div class="carousel-caption">
+			        ...
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img src="image/home/Home_trainandfly01.jpg" alt="...">
+			      <div class="carousel-caption">
+			        ...
+			      </div>
+			    </div>
+			  </div>
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+		</div>
+		<!--Body Contents-->
+		<div id="contents_container" class="row">
+			<div id="invoice" class="contents col-xs-6 col-sm-4 col-md-2">
+			  <div class="thumbnail">
+			    <img src="image/invoice.png" alt="Request Invoice">
+			    <div class="caption">
+			      <h4 class="content_title">Request Invoice</h4>
+			    </div>
+			  </div>
+			</div>
+			<div id="journey" class="contents col-xs-6 col-sm-4 col-md-2">
+			  <div class="thumbnail">
+			    <img src="image/international.png" alt="International Journey">
+			    <div class="caption">
+			      <h4 class="content_title">International Journey</h4>
+			    </div>
+			  </div>
+			</div>
+			<div id="event" class="contents col-xs-6 col-sm-4 col-md-2">
+			  <div class="thumbnail">
+			    <img src="image/event.png" alt="Conferences and Events">
+			    <div class="caption">
+			      <h4 class="content_title">Conferences and Events</h4>
+			    </div>
+			  </div>
+			</div>
+			<div id="promotion" class="contents col-xs-6 col-sm-4 col-md-2">
+			  <div class="thumbnail">
+			    <img src="image/offer.png" alt="Offer and Promotion">
+			    <div class="caption">
+			      <h4 class="content_title">Offer and Promotion</h4>
+			    </div>
+			  </div>
+		  	</div>
+		    <div id="renfecard" class="contents col-xs-6 col-sm-4 col-md-2">
+		      <div class="thumbnail">
+		        <img src="image/renfecard.png" alt="+Renfe Card">
+		        <div class="caption">
+		          <h4 class="content_title">Make +Renfe Card</h4>
+		        </div>
+		      </div>
+		    </div>
+			<div id="useinfo" class="contents col-xs-6 col-sm-4 col-md-2">
+			  <div class="thumbnail">
+			    <img src="image/info.png" alt="Usefull Information">
+			    <div class="caption">
+			      <h4 class="content_title">Usefull Information</h4>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="row inline-content">
+		<!--Copyright-->
+		<div id="copyright" class="col-md-2">
+			<img src="image/f-renfe.png">
+			<p>@Renfe. All rights reserved.</p>
+		</div>
+		<div class="col-md-6">
+		</div>
+		<!--Application-->
+		<div id="app_container" class="inline-content col-md-2">
+			<div class="col-md-4">
+				<a href="http://www.renfe.com/viajeros/movilidad/renfeticket/index.html"><img src="image/app/ticket.png"></a>
+				<p>Renfe Ticket</p>
+			</div>
+			<div class="col-md-4">
+				<a href="http://www.renfe.com/viajeros/movilidad/app_cercanias.html"><img src="image/app/cercanias.png"></a>
+				<p>Renfe Cercanias</p>
+			</div>
+			<div class="col-md-4">
+				<a href="http://www.renfe.com/viajeros/movilidad/index.html"><img src="image/app/horarios.png"></a>
+				<p>Renfe Horarios</p>
+			</div>
+		</div>
+		<!--Social Network Links-->
+		<div id="sns_container" class="col-md-2">
+			<ul class="inline-content">
+				<li><a href="https://www.facebook.com/Renfe" onclick="window.open(this.href, 'popupwindow', ''); return false;" title="Renfe on Facebook :: Opens in a new window"><img class="img-responsive" src="image/follow/facebook.png" alt="Facebook"></a></li>
+				<li><a href="https://twitter.com/renfe" onclick="window.open(this.href, 'popupwindow', ''); return false;" title="Renfe on Twitter :: Opens in a new window"><img class="img-responsive" src="image/follow/twitter.png" alt="Twitter"></a></li>
+				<li><a href="https://www.youtube.com/user/renfe" onclick="window.open(this.href, 'popupwindow', ''); return false;" title="Renfe en Youtube :: Opens in a new window"><img class="img-responsive" src="image/follow/youtube.png" alt="Youtube"></a></li>
+				<li><a href="https://www.flickr.com/photos/renfeoperadora/" onclick="window.open(this.href, 'popupwindow', ''); return false;" title="Renfe on Flicker :: Opens in a new window"><img class="img-responsive" src="image/follow/flicker.png" alt="Flicker"></a></li>
+				<li><a href=" http://blog.renfe.com/" onclick="window.open(this.href, 'popupwindow', ''); return false;" title="Renfe Blog :: Opens in a new window"><img class="img-responsive" src="image/follow/blog.png" alt="Blog"></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
