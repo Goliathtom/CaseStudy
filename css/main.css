@@ -102,11 +102,16 @@ ul, li{
 #search_btn{
 	margin-top: 2em;
 	height: 50px;
-	font-weight: bold;
 	font-size: 30px;
 }
-#search_btn>span{
+#search_btn>a{
+	color: black;
+}
+#search_btn>a:hover{
 	font-weight: bold;
+	text-decoration: none;
+}
+#search_btn>a>span{
 	font-size: 30px;
 }
 #body{

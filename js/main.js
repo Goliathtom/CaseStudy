@@ -16,9 +16,30 @@ $(document).ready(function(){
       numberOfMonths: 2,
       showButtonPanel: true
     });
+    $(".triptype").click(function(){
+      var typeid = $(this).children().attr("name");
+      console.log(typeid);
+      if(typeid == "one-way"){
+        $("#buying_totime").hide();
+      }
+      else if(typeid == "round"){
+        $("#buying_totime").show();
+      }
+    });
 
     $(".dropdown-time li a").click(function(){
 	  var selText = $(this).text();
 	  $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
 	});
 });
+
+function GetSearch(){
+  console.log("complete search");
+  var searchinfo=[
+  {"from":"","to":"","fromdate":"","fromtime":"","todate":"","totime":"","padult":"","pchild":"","psenior":"","triptype":""}
+  ];
+
+  var _from=$("#from_input").val();
+  var _to=$("#to_input").val();
+
+}
