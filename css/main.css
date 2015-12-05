@@ -11,6 +11,9 @@ ul, li{
 .inline-content>*{
 	display: inline-block;
 }
+.padding-top-btm{
+	padding:5px 0;
+}
 
 #header{
 
@@ -64,6 +67,13 @@ ul, li{
 	border: 0;
 	background-image: linear-gradient(to bottom,#D40000 0,#D40000 100%);
 }
+#buying_input>input{
+	width: 40.6%;
+	margin-right: 20px;
+}
+.ui-autocomplete{
+	z-index: 1001;
+}
 #menu_manage .dropdown-menu{
 	width: 20em;
 	background-color: #D40000;
@@ -80,6 +90,24 @@ ul, li{
 #menu_manage .dropdown-menu>li>a:hover{
 	background: #D49D00;
 	font-weight: bold;
+}
+#buyadv_container{
+	height: 100%;
+}
+.adv_img {
+	height: 200px;
+	padding-bottom: 10px;
+	cursor: pointer;
+}
+#search_btn{
+	margin-top: 2em;
+	height: 50px;
+	font-weight: bold;
+	font-size: 30px;
+}
+#search_btn>span{
+	font-weight: bold;
+	font-size: 30px;
 }
 #body{
 	position: relative;
