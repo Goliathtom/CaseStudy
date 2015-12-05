@@ -1,0 +1,28 @@
+html, body{
+	margin: 0;
+	padding: 0;
+}
+h2{
+	font-size: 18px;	
+	margin-top:0px;
+}
+ul, li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+table{
+	border: 2px solid black;
+	margin: 10px;
+}
+td{
+	margin-top:0px;
+	padding: 5px;
+	width: 5%;
+}
+#pay{
+	text-align: center;
+	font-size: 18px;
+}
+
