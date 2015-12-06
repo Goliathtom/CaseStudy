@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="uft-8">
 <link rel="stylesheet" type="text/css" href="css/addon/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/addon/bootstrap-theme.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/addon/bootstrap-theme.min.css"> -->
 <link rel="stylesheet" type="text/css" href="css/addon/jquery-ui.min.css">
 <link rel="stylesheet" type="text/css" href="css/addon/jquery-ui.structure.css">
 <link rel="stylesheet" type="text/css" href="css/addon/jquery-ui.theme.css">
@@ -13,6 +13,8 @@
 <link rel="stylesheet" type="text/css" href="css/setting.css">
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/query.js"></script>
+<script type="text/javascript" src="js/buying1.js"></script>
+
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Renfe</title>
@@ -56,11 +58,11 @@
 	  			<input id="to_input" type="text" placeholder="To" class="form-control col-md-5">
 	  		</div>
 	  		<div class="padding-top-btm col-md-12 btn-group" data-toggle="buttons">
-			  <label class="btn btn-warning active">
-			    <input type="radio" name="options" id="btn_round" autocomplete="off" checked> Round
+			  <label class="btn btn-default active">
+			    <input type="radio" name="round" id="btn_round" autocomplete="off" checked> Round
 			  </label>
-			  <label class="btn btn-warning">
-			    <input type="radio" name="options" id="btn_oneway" autocomplete="off"> One-way
+			  <label class="btn btn-default">
+			    <input type="radio" name="one-way" id="btn_oneway" autocomplete="off"> One-way
 			  </label>
 			</div>
 	  		<div class="padding-top-btm row col-md-12 inline-content">
@@ -101,7 +103,7 @@
 	  			</div>
 	  		<div class="col-md-12 padding-top-btm">
 	  			<button id="search_btn" class="btn btn-default col-md-10" onclick="GetSearch()">
-	  				<a class="col-md-12" href="buying1.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+	  				<a class="col-md-12"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 	  				Buy</a></button>
 	  		</div>
 	  	</div>
@@ -116,18 +118,31 @@
 
 	<!-- Body -->
 	<div id="body" class="row">
+		<div id="info_container" class="col-md-12">
+			<table id="info_table" class="col-md-8">
+				<thead>
+					<th class="col-md-2"><h2>From</h2></th>
+					<th class="col-md-2"><h2>To</h2></th>
+					<th class="col-md-4"><h2>Schedule</h2></th>
+					<th class="col-md-4"><h2>Passangers</h2></th>
+				</thead>
+				<tbody>
+				</tbody>
+	  		</table>
+		</div>
 		<div id="table_container" class="timetable col-md-8">
-			<table id="timetable" class="table table-bordered">
-			  <thead>
-			  	<th class="col-md-2">Departure Time</th>
-			  	<th class="col-md-2">Arrive Time</th>
-			  	<th class="col-md-2">Time</th>
-			  	<th class="col-md-2">Minimum Price</th>
-			  	<th class="col-md-3">Specibility</th>
-			  	<th class="col-md-1"></th>
-			  </thead>
-			  <tbody id="timetable_body"></tbody>
-			</table>
+			<div id="timetable" class="table table-bordered">
+				<div class="col-md-12">
+			  		<h4 class="col-md-2">Departure Time</h4>
+				  	<h4 class="col-md-2">Arrive Time</h4>
+				  	<h4 class="col-md-2">Time</h4>
+				  	<h4 class="col-md-2">Price</h4>
+				  	<h4 class="col-md-3">Specibility</h4>
+				  	<h4 class="col-md-1">Detail</h4>	
+				</div>
+			</div>
+			<div id="timetable_body" class="">
+			</div>
 		</div>
 	</div>
 	<div id="footer" class="row inline-content">

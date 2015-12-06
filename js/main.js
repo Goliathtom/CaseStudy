@@ -32,6 +32,37 @@ $(document).ready(function(){
 	  $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
 	});
 });
+  var searchinfo=[
+  {"from":"","to":"","fromdate":"","fromtime":"","todate":"","totime":"","padult":"","pchild":"","psenior":"","triptype":""}
+  ];
+  
+  function SendDataQuery(_from, _to, _fromdate, _fromtime, _todate, _totime, _padult, _pchild, _psenior, _triptype){
+    searchinfo.from = _from;
+    searchinfo.to = _to;
+    searchinfo.fromdate = _fromdate;
+    searchinfo.fromtime = _fromtime;
+    searchinfo.todate = _todate;
+    searchinfo.totime = _totime;
+    searchinfo.padult = _padult;
+    searchinfo.pchild = _pchild;
+    searchinfo.psenior = _psenior;
+    searchinfo.triptype = _triptype;
+
+
+    console.log(searchinfo);
+  }
+
+  function MakeTable(){
+    $("#info_table").find("tbody").children().remove();
+
+    var string="<tr><td>"+searchinfo.from+"</td>";
+    string+="<td>"+searchinfo.to+"</td>";
+    string+="<td>"+searchinfo.fromdate+" ~ "+searchinfo.todate+"</td>";
+    string+="<td>"+searchinfo.padult+" Adults<br>"+searchinfo.pchild+" Child<br>"+searchinfo.psenior+" Seniors</td></tr>";
+
+    $("#info_table").find("tbody").append(string);
+  }
+
 
 function GetSearch(){
   console.log("complete search");
@@ -41,5 +72,28 @@ function GetSearch(){
 
   var _from=$("#from_input").val();
   var _to=$("#to_input").val();
+  var _triptype=$("#buying_body").find(".active").children().attr("name");
 
+  var _fromdate =$("#buying_fromtime").children("input").val();
+  var _todate =$("#buying_totime").children("input").val();
+
+  var _fromtime = $("#buying_fromtime").children("div").children("a").text();
+  var _totime = $("#buying_totime").children("div").children("a").text();
+
+  var _padult = $("#buying_persons").children().eq(0).children("input").val();
+  var _pchild = $("#buying_persons").children().eq(1).children("input").val();
+  var _psenior = $("#buying_persons").children().eq(2).children("input").val();
+  console.log(_from);
+  console.log(_to);
+  console.log(_fromdate);
+  console.log(_todate);
+  console.log(_fromtime);
+  console.log(_totime);
+  console.log(_padult);
+  console.log(_pchild);
+  console.log(_psenior);
+  //SendDataQuery(_from, _to, _fromdate, _fromtime, _todate, _totime, _padult, _pchild, _psenior, _triptype)
+  SendDataQuery(_from, _to, _fromdate, _fromtime, _todate, _totime, _padult, _pchild, _psenior, _triptype);
+
+  MakeTable();
 }

@@ -137,7 +137,7 @@ ul, li{
 	background-color: #fafafa;
 }
 #footer{
-	min-height: 200px;
+	min-height: 120px;
 	background-color: #D40000;
 }
 #copyright{
@@ -147,7 +147,7 @@ ul, li{
 	color:#fafafa;
 }
 #app_container{
-	margin-top: 10px;
+	margin-top: 20px;
 }
 #app_container>div>a>img{
 	display: block;
