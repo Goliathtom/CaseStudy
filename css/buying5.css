@@ -18,8 +18,11 @@ td{
 	padding: 5px;
 	width: 5%;
 }
-#pay{
+#thank{
 	text-align: center;
-	font-size: 18px;
+	color: #3c763d;
+	margin: 60px;
 }
-
+#btn_container{
+	margin-bottom: 55px;
+}

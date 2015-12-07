@@ -68,8 +68,7 @@ ul, li{
 	background-image: linear-gradient(to bottom,#D40000 0,#D40000 100%);
 }
 #buying_input>input{
-	width: 40.6%;
-	margin-right: 20px;
+	width: 41.66666667%;
 }
 .ui-autocomplete{
 	z-index: 1001;
@@ -164,7 +163,7 @@ ul, li{
 	margin-top: 20px;
 }
 #sns_container>ul>li{
-	padding: 0 4px;
+	padding: 0 2px;
 }
 
 /*Info Table*/
@@ -176,4 +175,10 @@ ul, li{
 .buying_table>thead>tr>th,
 .buying_table>tbody>tr>td{
 	border-right: 2px solid black;
+}
+
+@media only screen and (max-width:991px){
+	.buying_table{
+		margin: 0;
+	}
 }

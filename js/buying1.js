@@ -29,8 +29,8 @@ $(document).ready(function(){
 		$(this).parent().parent().addClass("activeitem");
 		$(this).parent().parent().removeClass("items");
 
-		var detail_string="<div id='price_container' class='col-md-12'>";
-		detail_string+=		"<table id='price_table' class='col-md-12'>";
+		var detail_string="<div id='price_container' class='col-md-12 col-xs-12'>";
+		detail_string+=		"<table id='price_table' class='col-md-12 col-xs-12'>";
 		detail_string+=			"<thead>";
 		detail_string+=				"<tr><th></th><th>Promo</th><th>Ida y Vuelta</th><th>Promo+</th><th>Flexible</th</t</thead>";
 		detail_string+=			"<tbody id='price_body'>";
@@ -57,9 +57,9 @@ $(document).ready(function(){
 		detail_string+=				"</tr>";
 		detail_string+=			"</tbody>";
 		detail_string+=		"</table>";
-		detail_string+=		"<div id='buyticket_container' class='col-md-12'>";
-		detail_string+=			"<span class='col-md-10'><a href='#'>Have you discount code?</a></span>";
-		detail_string+=			"<button id='buy_btn' class='col-md-2 btn btn-default btn-lg'>Buy</button>";
+		detail_string+=		"<div id='buyticket_container' class='col-md-12 col-xs-12'>";
+		detail_string+=			"<span class='col-md-10 col-xs-10'><a href='#'>Have you discount code?</a></span>";
+		detail_string+=			"<button id='buy_btn' class='col-xs-2 col-md-2 btn btn-default btn-lg'>Buy</button>";
 		detail_string+=		"</div>";
 		detail_string+=	"</div>";
 
@@ -87,12 +87,12 @@ $(document).ready(function(){
 
   	string=""
   	for(var i=0;i<trainlist.length;i++){
-  		string+="<div class='items col-md-12'>"
-	  	string+="<p class='col-md-2'>"+trainlist[i].dtime+"</p>";
-	  	string+="<p class='col-md-2'>"+trainlist[i].atime+"</p>";
-	  	string+="<p class='col-md-2'>"+trainlist[i].spend+"</p>";
-	  	string+="<p class='col-md-2'>"+trainlist[i].mprice+"</p>";
-	  	string+="<div class='item_fac col-md-3'>";
+  		string+="<div class='items col-md-12 col-xs-12'>"
+	  	string+="<p class='col-md-2 col-xs-2'>"+trainlist[i].dtime+"</p>";
+	  	string+="<p class='col-md-2 col-xs-2'>"+trainlist[i].atime+"</p>";
+	  	string+="<p class='col-md-2 col-xs-2'>"+trainlist[i].spend+"</p>";
+	  	string+="<p class='col-md-2 col-xs-2'>"+trainlist[i].mprice+"</p>";
+	  	string+="<div class='item_fac col-md-3 col-xs-3'>";
 	  	if(trainlist[i].scafe==1){
 	  		string+="<img src='image/facility/cafe.gif' title='Cafeteria'>"
 	  	}
@@ -109,7 +109,7 @@ $(document).ready(function(){
 	  		string+="<img src='image/facility/video.gif' title='Video available'>"
 	  	}
 	  	string+="</div>";
-	  	string+="<p class='col-md-1'>"+trainlist[i].detail+"</p></div>";
+	  	string+="<p class='col-md-1 col-xs-1'>"+trainlist[i].detail+"</p></div>";
 	  }
 
   	$("#timetable_body").append(string);
