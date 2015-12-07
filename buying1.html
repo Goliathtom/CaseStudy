@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uft-8">
+<html lang="en">
 <link rel="stylesheet" type="text/css" href="css/addon/bootstrap.min.css">
 <!-- <link rel="stylesheet" type="text/css" href="css/addon/bootstrap-theme.min.css"> -->
 <link rel="stylesheet" type="text/css" href="css/addon/jquery-ui.min.css">
@@ -16,6 +16,7 @@
 <script type="text/javascript" src="js/buying1.js"></script>
 
 <head>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Renfe</title>
 </head>
@@ -119,12 +120,14 @@
 	<!-- Body -->
 	<div id="body" class="row">
 		<div id="info_container" class="col-md-12">
-			<table id="info_table" class="col-md-8">
+			<table id="info_table" class="col-md-8 buying_table">
 				<thead>
-					<th class="col-md-2"><h2>From</h2></th>
-					<th class="col-md-2"><h2>To</h2></th>
-					<th class="col-md-4"><h2>Schedule</h2></th>
-					<th class="col-md-4"><h2>Passangers</h2></th>
+					<tr>
+						<th class="col-md-2"><h2>From</h2></th>
+						<th class="col-md-2"><h2>To</h2></th>
+						<th class="col-md-4"><h2>Schedule</h2></th>
+						<th class="col-md-4"><h2>Passangers</h2></th>
+					</tr>
 				</thead>
 				<tbody>
 				</tbody>
@@ -145,7 +148,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="footer" class="row inline-content">
+	<div id="footer" class="inline-content">
 		<!--Copyright-->
 		<div id="copyright" class="col-md-2">
 			<img src="image/f-renfe.png">

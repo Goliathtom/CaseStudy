@@ -44,28 +44,14 @@ ul, li{
 #menu_list>li:hover{
 	background: #D49D00;
 }
-.buying_table{
-	padding-right: 215px;
-    padding-left: 145px;
-	border: 2px;
-	width: 70%;
-    padding-bottom: 15px;
-    border-style: solid;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-.buying_table>h1{
-	font-size: 20px;
-	font-weight: bold;
-}
-.thead>tr>th{
+/*.thead>tr>th{
 	font-size: 20px;
 	border-right: 2px solid black;
 }
 .tbody>tr>th{
 	font-size: 10px;
 	border-right: 2px solid black;
-}
+}*/
 .text{
 	padding-bottom: 10px;
 }

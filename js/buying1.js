@@ -16,7 +16,7 @@ var trainlist=[
   ];
 $(document).ready(function(){
 	$( document ).tooltip();
-
+	console.log(searchinfo);
 	MakeTable();
 	console.log(trainlist);
 	MakeTrainTable();
@@ -69,9 +69,13 @@ $(document).ready(function(){
 			$("#price_body").find(".checked").removeClass("checked");
 			$(this).addClass("checked");
 		});
+
+		$("#buy_btn").click(function(){
+			console.log("click");
+			location.replace("buying4.html");
+		});
 	});
 
-	
 	// console.log(searchinfo);
 });
   function MakeTrainTable(){
@@ -107,7 +111,6 @@ $(document).ready(function(){
 	  	string+="</div>";
 	  	string+="<p class='col-md-1'>"+trainlist[i].detail+"</p></div>";
 	  }
-
 
   	$("#timetable_body").append(string);
   }

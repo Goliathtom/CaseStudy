@@ -2,14 +2,20 @@
 <html lang="en">
 <link rel="stylesheet" type="text/css" href="css/addon/bootstrap.min.css">
 <!-- <link rel="stylesheet" type="text/css" href="css/addon/bootstrap-theme.min.css"> -->
+<link rel="stylesheet" type="text/css" href="css/addon/jquery-ui.min.css">
 <link rel="stylesheet" type="text/css" href="css/addon/jquery-ui.structure.css">
+<link rel="stylesheet" type="text/css" href="css/addon/jquery-ui.theme.css">
 <script type="text/javascript" src="js/addon/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/addon/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/addon/jquery-ui.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" href="css/buying5.css">
+<link rel="stylesheet" type="text/css" href="css/setting.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/buying5.css"> -->
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/query.js"></script>
 <head>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Renfe</title>
 </head>
@@ -45,26 +51,93 @@
 	<div id="buying_container" class="collapse row">
 	  <div id="buying_body" class="well">
 	  	<!--Buying Page Content-->
+	  	<div class="col-md-6">
+	  		<div id="buying_input" class="padding-top-btm rowcol-md-12 inline-content">
+	  			<input id="from_input" type="text" placeholder="From" class="form-control col-md-5">
+	  			<input id="to_input" type="text" placeholder="To" class="form-control col-md-5">
+	  		</div>
+	  		<div class="padding-top-btm col-md-12 btn-group" data-toggle="buttons">
+			  <label class="triptype btn btn-warning active">
+			    <input type="radio" name="round" id="btn_round" autocomplete="off" checked> Round
+			  </label>
+			  <label class="triptype btn btn-warning">
+			    <input type="radio" name="one-way" id="btn_oneway" autocomplete="off"> One-way
+			  </label>
+			</div>
+	  		<div class="padding-top-btm row col-md-12 inline-content">
+	  			<div id="buying_fromtime" class="col-md-3">
+	  				<input type="text" placeholder="MM/DD/YYYY" class="form-control" id="from_datepicker">
+	  				<div class="padding-top-btm btn-group"> <a class="btn btn-default dropdown-toggle btn-select2" data-toggle="dropdown" href="#">Select Time <span class="caret"></span></a>
+			            <ul class="dropdown-time dropdown-menu">
+			                <li><a href="#">Morning</a></li>
+			                <li><a href="#">Afternoon</a></li>
+			                <li><a href="#">Evening</a></li>
+			            </ul>
+			        </div>
+	  			</div>
+	  			<div id="buying_totime" class="col-md-3">
+	  				<input type="text" class="form-control" placeholder="MM/DD/YYYY" id="to_datepicker">
+	  				<div class="padding-top-btm btn-group"> <a class="btn btn-default dropdown-toggle btn-select2" data-toggle="dropdown" href="#">Select Time <span class="caret"></span></a>
+			            <ul class="dropdown-time dropdown-menu">
+			                <li><a href="#">Morning</a></li>
+			                <li><a href="#">Afternoon</a></li>
+			                <li><a href="#">Evening</a></li>
+			            </ul>
+			        </div>
+	  			</div>
+	  		</div>
+	  		<div id="buying_persons" class="row inline-content">
+	  				<div class="col-md-2">
+	  					<span style="color: #fff;">Adult</span>
+	  					<input class="form-control" type="number" name="adult" value="0" min="0">
+	  				</div>
+	  				<div class="col-md-2">
+	  					<span style="color: #fff;">Child (0-14)</span>
+	  					<input class="form-control" type="number" name="child" value="0" min="0">
+	  				</div>
+	  				<div class="col-md-2">
+	  					<span style="color: #fff;">Senior (+65)</span>
+	  					<input class="form-control" type="number" name="senior" value="0" min="0">
+	  				</div>
+	  			</div>
+	  		<div class="col-md-12 padding-top-btm">
+	  			<button id="search_btn" class="btn btn-default col-md-10">
+	  				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+	  				Buy</button>
+	  		</div>
+	  	</div>
+	  	<div id="buyadv_container" class="col-md-6 row">
+	  		<a href=""><img class="adv_img col-md-6" src="image/add/adv1.jpg"></a>
+	  		<a href=""><img class="adv_img col-md-6" src="image/add/adv2.jpg"></a>
+	  		<a href=""><img class="adv_img col-md-6" src="image/add/adv3.jpg"></a>
+	  		<a href=""><img class="adv_img col-md-6" src="image/add/adv4.jpg"></a>
+	  	</div>
 	  </div>
 	</div>
 
 	<!--Here is Body, Riccardo & Linda Dollar!!!-->	
-	<div id="body" class="row">	
-		<table>
-  			<tr>
-  			  <td><h2>From</h2></td>
-  			  <td><h2>To</h2></td>
-  			  <td><h2>Schedule</h2></td>		
-  			  <td><h2>Passangers</h2></td>
- 			 </tr>
-  			<tr>
-  				<td>where</td>
-  				<td rowspan="2">where</td>
-  				<td>20/05/15<br> 15/05/15</td>
-  				<td>1 adult<br>1 children<br>1 Senior</td>
-  			</tr>
-  		</table>
-		<table>
+	<div id="body" class="row">
+		<div id="info_container" class="col-md-12">
+			<table class="col-md-8 buying_table">
+				<thead>
+					<tr>
+						<th class="col-md-2"><h2>From</h2></th>
+						<th class="col-md-2"><h2>To</h2></th>
+						<th class="col-md-4"><h2>Schedule</h2></th>
+						<th class="col-md-4"><h2>Passangers</h2></th>
+					</tr>
+				</thead>
+				<tbody class="tbody">
+					<tr>
+			    		<td class="col-md-3">Where</td>
+			    		<td class="col-md-3">Where</td>
+			    		<td class="col-md-3">From mm/dd/yyyy <br>To mm/dd/yyyy</td>
+			    		<td class="col-md-3">1 Adult <br>1 Child <br>1 Senior</td>
+			    	</tr>
+				</tbody>
+	  		</table>
+		</div>	
+		<table class="buying_table">
   			<tr>
   				<td><h2>Time</h2></td>
   			  	<td><h2>Duration</h2></td>
@@ -78,7 +151,7 @@
   				<td>$55</td>
   			</tr>
 		</table>
-		<table>
+		<table class="buying_table">
   			<tr>
   				<td><h2>Name</h2></td>
   			  	<td><h2>Phone</h2></td>
@@ -101,7 +174,7 @@
 	</div>
 
 	<!--Footer-->
-	<div id="footer" class="row inline-content">
+	<div id="footer" class="inline-content">
 		<!--Copyright-->
 		<div id="copyright" class="col-md-2">
 			<img src="image/f-renfe.png">

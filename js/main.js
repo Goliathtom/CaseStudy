@@ -28,9 +28,12 @@ $(document).ready(function(){
     });
 
     $(".dropdown-time li a").click(function(){
-	  var selText = $(this).text();
-	  $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
-	});
+  	  var selText = $(this).text();
+  	  $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+  	});
+    $("#search_btn").click(function(){
+      GetSearch();
+    });
 });
   var searchinfo=[
   {"from":"","to":"","fromdate":"","fromtime":"","todate":"","totime":"","padult":"","pchild":"","psenior":"","triptype":""}
@@ -94,6 +97,4 @@ function GetSearch(){
   console.log(_psenior);
   //SendDataQuery(_from, _to, _fromdate, _fromtime, _todate, _totime, _padult, _pchild, _psenior, _triptype)
   SendDataQuery(_from, _to, _fromdate, _fromtime, _todate, _totime, _padult, _pchild, _psenior, _triptype);
-
-  MakeTable();
 }
