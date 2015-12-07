@@ -13,8 +13,7 @@
 <link rel="stylesheet" type="text/css" href="css/setting.css">
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/query.js"></script>
-<script type="text/javascript" src="js/buying1.js"></script>
-
+<script type="text/javascript" src="js/schedule.js"></script>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -117,37 +116,66 @@
 	  </div>
 	</div>
 
-	<!-- Body -->
+	<!--body-->
 	<div id="body" class="row">
-		<div id="info_container" class="col-xs-12 col-md-10 col-md-offset-1">
-			<table id="info_table" class="col-xs-12 col-md-12 col-md-offset-1 buying_table">
+		<div id="searchinfo_container" class="col-sm-12">
+			<div id="buying_input" class="padding-top-btm col-xs-12 col-md-10 col-md-offset-1 inline-content">
+				<div class="col-sm-4">
+					<label>From</label>
+					<input id="from_search" type="text" placeholder="From" class="form-control ">
+				</div>
+		  		<div class="col-sm-4 col-sm-offset-0">
+		  			<label>To</label>
+		  			<input id="to_search" type="text" placeholder="To" class="form-control">
+		  		</div>
+		  		<div class="col-sm-3 col-sm-offset-1">
+		  			<label>Time</label>
+		  			<input type="text" placeholder="MM/DD/YYYY" class="form-control" id="search_datepicker">
+		  		</div>
+		  	</div>
+		  	<div id="condition_container" class="padding-top-btm col-xs-12 col-md-10 col-md-offset-1 inline-content">
+		  		<div class="col-md-8">
+		  			<div class="btn-group" data-toggle="buttons">
+					  <label id="con_bed" class="btn btn-default">
+					    <input type="checkbox" autocomplete="off" checked><img src="image/facility/bed.gif" alt="Sofa Seat" title='Sofa Seat'>
+					  </label>
+					  <label id="con_cafe" class="btn btn-default">
+					    <input type="checkbox" autocomplete="off"><img src="image/facility/cafe.gif" alt="Cafeteria" title='Cafeteria'>
+					  </label>
+					  <label id="con_shower" class="btn btn-default">
+					    <input type="checkbox" autocomplete="off"><img src="image/facility/shower.gif" alt="Facility for Shower" title='Facility for Shower'>
+					  </label>
+					  <label id="con_tfd" class="btn btn-default">
+					    <input type="checkbox" autocomplete="off"><img src="image/facility/tfd.gif" alt="Toilet for the disabled" title='Toilet for the disabled'>
+					  </label>
+					  <label id="con_video" class="btn btn-default">
+					    <input type="checkbox" autocomplete="off"><img src="image/facility/video.gif" alt="Video available" title='Video available'>
+					  </label>
+					</div>
+		  		</div>
+		  		<div class="col-sm-3 col-sm-offset-1">
+		  			<button class="btn btn-lg btn-warning col-sm-12" onclick="SearchTrain()">Search</button>
+		  		</div>
+		  	</div>
+		</div>
+		<div class="col-md-10 col-xs-12 col-md-offset-1">
+			<table id="search_table" class="table table-bordered col-sm-12">
 				<thead>
 					<tr>
-						<th class="col-md-2 col-xs-2"><h2>From</h2></th>
-						<th class="col-md-2 col-xs-2"><h2>To</h2></th>
-						<th class="col-md-4 col-xs-4"><h2>Schedule</h2></th>
-						<th class="col-md-4 col-xs-4"><h2>Passangers</h2></th>
+						<th class="col-sm-3">From</th>
+						<th class="col-sm-3">To</th>
+						<th class="col-sm-1">Departure</th>
+						<th class="col-sm-1">Arrival</th>
+						<th class="col-sm-1">Duration</th>
+						<th class="col-sm-3">Facilities</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="search_body">
 				</tbody>
 	  		</table>
 		</div>
-		<div id="table_container" class="col-md-offset-1 col-xs-12 col-md-10">
-			<div id="timetable" class="table table-bordered">
-				<div class="col-md-12 col-xs-12">
-			  		<h4 class="col-md-2 col-xs-2">Departure Time</h4>
-				  	<h4 class="col-md-2 col-xs-2">Arrive Time</h4>
-				  	<h4 class="col-md-2 col-xs-2">Time</h4>
-				  	<h4 class="col-md-2 col-xs-2">Price</h4>
-				  	<h4 class="col-md-3 col-xs-3">Specibility</h4>
-				  	<h4 class="col-md-1 col-xs-1">Detail</h4>	
-				</div>
-			</div>
-			<div id="timetable_body" class="">
-			</div>
-		</div>
 	</div>
+	
 	<!--Footer-->
 	<div id="footer" class="row inline-content">
 		<!--Copyright-->

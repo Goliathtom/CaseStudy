@@ -169,8 +169,7 @@ ul, li{
 /*Info Table*/
 .buying_table{
 	border: 2px solid black;
-	margin: 10px;
-	margin-left: 16.66666667%;
+	margin: 10px 0;
 }
 .buying_table>thead>tr>th,
 .buying_table>tbody>tr>td{

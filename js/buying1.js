@@ -1,19 +1,5 @@
 var searchinfo;
-var trainlist=[
-  {"dtime":"08:00","atime":"10:24","spend":"2h 24m","mprice":"55","scafe":"1","sbed":"0","stfd":"1","sshwr":"0","svideo":"1","detail":""},
-  {"dtime":"08:13","atime":"10:38","spend":"2h 25m","mprice":"65","scafe":"0","sbed":"1","stfd":"1","sshwr":"1","svideo":"1","detail":""},
-  {"dtime":"08:37","atime":"11:00","spend":"2h 23m","mprice":"85","scafe":"1","sbed":"1","stfd":"1","sshwr":"1","svideo":"0","detail":""},
-  {"dtime":"08:55","atime":"11:18","spend":"2h 23m","mprice":"66","scafe":"1","sbed":"0","stfd":"1","sshwr":"0","svideo":"1","detail":""},
-  {"dtime":"08:37","atime":"11:00","spend":"2h 23m","mprice":"85","scafe":"1","sbed":"1","stfd":"1","sshwr":"1","svideo":"0","detail":""},
-  {"dtime":"08:37","atime":"11:00","spend":"2h 23m","mprice":"85","scafe":"1","sbed":"1","stfd":"1","sshwr":"1","svideo":"0","detail":""},
-  {"dtime":"08:37","atime":"11:00","spend":"2h 23m","mprice":"85","scafe":"1","sbed":"1","stfd":"1","sshwr":"1","svideo":"0","detail":""},
-  {"dtime":"08:37","atime":"11:00","spend":"2h 23m","mprice":"85","scafe":"1","sbed":"1","stfd":"1","sshwr":"1","svideo":"0","detail":""},
-  {"dtime":"08:37","atime":"11:00","spend":"2h 23m","mprice":"85","scafe":"1","sbed":"1","stfd":"1","sshwr":"1","svideo":"0","detail":""},
-  {"dtime":"08:37","atime":"11:00","spend":"2h 23m","mprice":"85","scafe":"1","sbed":"1","stfd":"1","sshwr":"1","svideo":"0","detail":""},
-  {"dtime":"08:37","atime":"11:00","spend":"2h 23m","mprice":"85","scafe":"1","sbed":"1","stfd":"1","sshwr":"1","svideo":"0","detail":""},
-  {"dtime":"08:37","atime":"11:00","spend":"2h 23m","mprice":"85","scafe":"1","sbed":"1","stfd":"1","sshwr":"1","svideo":"0","detail":""},
-  {"dtime":"08:37","atime":"11:00","spend":"2h 23m","mprice":"85","scafe":"1","sbed":"1","stfd":"1","sshwr":"1","svideo":"0","detail":""}
-  ];
+
 $(document).ready(function(){
 	$( document ).tooltip();
 	console.log(searchinfo);
