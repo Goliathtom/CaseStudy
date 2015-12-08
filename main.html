@@ -21,14 +21,18 @@
 <body>
 <div class="container-fluid">
   	<div id="header" class="row">
-  		<div>
-  			<a href=""><img id="home_logo" src="image/logo.png"></a>
+  		<div class="col-sm-8">
+  			<a href="main.html"><img id="home_logo" alt="Lenfe" src="image/logo.png"></a>
+  		</div>
+  		<div class="float-right btn-group inline-content" style="margin: 30px;">
+  			<button class="btn btn-default">Sign Up</button>
+  			<button class="btn btn-danger">Sign In</button>
   		</div>
 	</div>
 	<div id="menu" class="row">
 		<div id="menu_body">
 			<ul id="menu_list">
-				<li><a class="btn" role="button" data-toggle="collapse" href="#buying_container" aria-expanded="false" aria-controls="collapseExample">Buy</a></li>
+				<li><a class="btn" role="button" data-toggle="collapse" href="#buying_container" aria-expanded="false" aria-controls="buying_container">Buy</a></li>
 				<li id="menu_manage" role="presentation" class="dropdown">
 			   	 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Manage<span class="caret"></span>
 			    </a>
@@ -58,10 +62,10 @@
 	  		</div>
 	  		<div class="padding-top-btm col-xs-12 col-md-12 btn-group" data-toggle="buttons">
 			  <label class="triptype btn btn-warning active">
-			    <input type="radio" name="round" id="btn_round" autocomplete="off" checked> Round
+			    <input type="radio" name="round" id="btn_round" checked> Round
 			  </label>
 			  <label class="triptype btn btn-warning">
-			    <input type="radio" name="one-way" id="btn_oneway" autocomplete="off"> One-way
+			    <input type="radio" name="one-way" id="btn_oneway"> One-way
 			  </label>
 			</div>
 	  		<div class="padding-top-btm row col-xs-12 col-md-12 inline-content">
@@ -107,10 +111,10 @@
 	  		</div>
 	  	</div>
 	  	<div id="buyadv_container" class="col-md-6 col-xs-6">
-	  		<a href=""><img class="adv_img col-md-6 col-xs-6" src="image/add/adv1.jpg"></a>
-	  		<a href=""><img class="adv_img col-md-6 col-xs-6" src="image/add/adv2.jpg"></a>
-	  		<a href=""><img class="adv_img col-md-6 col-xs-6" src="image/add/adv3.jpg"></a>
-	  		<a href=""><img class="adv_img col-md-6 col-xs-6" src="image/add/adv4.jpg"></a>
+	  		<a href=""><img class="adv_img col-md-6 col-xs-6" src="image/add/adv1.jpg" alt="adv1"></a>
+	  		<a href=""><img class="adv_img col-md-6 col-xs-6" src="image/add/adv2.jpg" alt="adv2"></a>
+	  		<a href=""><img class="adv_img col-md-6 col-xs-6" src="image/add/adv3.jpg" alt="adv3"></a>
+	  		<a href=""><img class="adv_img col-md-6 col-xs-6" src="image/add/adv4.jpg" alt="adv4"></a>
 	  	</div>
 	  </div>
 	</div>
@@ -228,27 +232,13 @@
 	<!--Footer-->
 	<div id="footer" class="row inline-content">
 		<!--Copyright-->
-		<div id="copyright" class="col-md-5 col-xs-12">
-			<img src="image/f-renfe.png">
-			<p>@Renfe. All rights reserved.</p>
+		<div id="copyright" class="float-left float-xs-left">
+			<img src="image/f-renfe.png" alt="Renfe">
+			<p>@Renfe. All rights reserved.<br>@Group11. All rights reserved.</p>
 		</div>
-		<!--Application-->
-		<div id="app_container" class="inline-content col-xs-12 col-md-3">
-			<div class="col-md-4">
-				<a href="http://www.renfe.com/viajeros/movilidad/renfeticket/index.html"><img src="image/app/ticket.png"></a>
-				<p>Renfe Ticket</p>
-			</div>
-			<div class="col-md-4">
-				<a href="http://www.renfe.com/viajeros/movilidad/app_cercanias.html"><img src="image/app/cercanias.png"></a>
-				<p>Renfe Cercanias</p>
-			</div>
-			<div class="col-md-4">
-				<a href="http://www.renfe.com/viajeros/movilidad/index.html"><img src="image/app/horarios.png"></a>
-				<p>Renfe Horarios</p>
-			</div>
-		</div>
+		
 		<!--Social Network Links-->
-		<div id="sns_container" class="col-xs-12 col-md-4">
+		<div id="sns_container" class="float-left float-xs-left">
 			<ul class="inline-content">
 				<li><a href="https://www.facebook.com/Renfe" onclick="window.open(this.href, 'popupwindow', ''); return false;" title="Renfe on Facebook :: Opens in a new window"><img class="img-responsive" src="image/follow/facebook.png" alt="Facebook"></a></li>
 				<li><a href="https://twitter.com/renfe" onclick="window.open(this.href, 'popupwindow', ''); return false;" title="Renfe on Twitter :: Opens in a new window"><img class="img-responsive" src="image/follow/twitter.png" alt="Twitter"></a></li>
@@ -256,6 +246,21 @@
 				<li><a href="https://www.flickr.com/photos/renfeoperadora/" onclick="window.open(this.href, 'popupwindow', ''); return false;" title="Renfe on Flicker :: Opens in a new window"><img class="img-responsive" src="image/follow/flicker.png" alt="Flicker"></a></li>
 				<li><a href=" http://blog.renfe.com/" onclick="window.open(this.href, 'popupwindow', ''); return false;" title="Renfe Blog :: Opens in a new window"><img class="img-responsive" src="image/follow/blog.png" alt="Blog"></a></li>
 			</ul>
+		</div>
+		<!--Application-->
+		<div id="app_container" class="inline-content float-right float-xs-left">
+			<div class="col-md-4">
+				<a href="http://www.renfe.com/viajeros/movilidad/renfeticket/index.html"><img src="image/app/ticket.png" alt="Ticket"></a>
+				<p>Renfe Ticket</p>
+			</div>
+			<div class="col-md-4">
+				<a href="http://www.renfe.com/viajeros/movilidad/app_cercanias.html"><img src="image/app/cercanias.png" alt="Cercanias"></a>
+				<p>Renfe Cercanias</p>
+			</div>
+			<div class="col-md-4">
+				<a href="http://www.renfe.com/viajeros/movilidad/index.html"><img src="image/app/horarios.png" alt="Horarios"></a>
+				<p>Renfe Horarios</p>
+			</div>
 		</div>
 	</div>
 </div>

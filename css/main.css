@@ -14,7 +14,14 @@ ul, li{
 .padding-top-btm{
 	padding:5px 0;
 }
-
+.float-left{
+	float: left;
+	margin-left: 20px;
+}
+.float-right{
+	float: right;
+	margin-right: 20px;
+}
 #header{
 
 }
@@ -179,5 +186,11 @@ ul, li{
 @media only screen and (max-width:991px){
 	.buying_table{
 		margin: 0;
+	}
+}
+@media only screen and (max-width: 888px){
+	.float-xs-left,{
+		float: left;
+		width: 100%;
 	}
 }
