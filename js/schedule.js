@@ -17,8 +17,20 @@ $(document).ready(function(){
 function SearchTrain(){
   $("#search_body").children().remove();
   var from = $("#from_search").val();
+  if(from==""||from==null){
+    alert("Enter your departure area!")
+    return false;
+  }
   var to = $("#to_search").val();
+  if(to==""||to==null){
+    alert("Enter your arriving area!")
+    return false;
+  }
   var date = $("#search_datepicker").val();
+  if(date==""||date==null){
+    alert("Enter the date you want to search!")
+    return false;
+  }
   var con_bed=0;
   var con_cafe=0;
   var con_shower=0;
