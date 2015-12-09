@@ -123,6 +123,8 @@
 
 	<!-- Body -->
 	<div id="body" class="row">
+		<div>
+		<label class="col-xs-12 col-md-10 col-md-offset-1">Trip Information</label>
 		<div id="info_container" class="col-xs-12 col-md-10 col-md-offset-1">
 			<table id="info_table" class="col-xs-12 col-md-12 col-md-offset-1 buying_table">
 				<thead>
@@ -136,9 +138,23 @@
 				<tbody>
 				</tbody>
 	  		</table>
+	  		</div>
 		</div>
-		<div id="table_container" class="col-md-offset-1 col-xs-12 col-md-10">
-			<div id="timetable" class="table table-bordered">
+		
+	<div id="tab_container" class="col-xs-12 col-md-10 col-md-offset-1">
+	  <!-- Nav tabs -->
+	  <ul id="trip_tab" class="nav nav-pills col-sm-12" role="tablist">
+	    <li role="presentation" class="active col-sm-6">
+	    	<a href="#going_train" aria-controls="going_train" role="tab" data-toggle="tab">Going</a></li>
+	    <li role="presentation" class="col-sm-6">
+	    	<a href="#return_train" aria-controls="return_train" role="tab" data-toggle="tab">Return</a></li>
+	  </ul>
+
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+	    <div role="tabpanel" class="col-sm-12 tab-pane active" id="going_train">
+	    <div id="going_container">
+			<div id="going_timetable" class="table table-bordered">
 				<div class="col-md-12 col-xs-12">
 			  		<h4 class="col-md-2 col-xs-2">Departure Time</h4>
 				  	<h4 class="col-md-2 col-xs-2">Arrive Time</h4>
@@ -148,9 +164,30 @@
 				  	<h4 class="col-md-1 col-xs-1">Detail</h4>	
 				</div>
 			</div>
-			<div id="timetable_body" class="">
+			<div class="timetable_body">
 			</div>
 		</div>
+	</div>
+	    <div role="tabpanel" class="col-sm-12 tab-pane" id="return_train">
+	    <div id="return_container">
+			<div id="return_timetable" class="table table-bordered">
+				<div class="col-md-12 col-xs-12">
+			  		<h4 class="col-md-2 col-xs-2">Departure Time</h4>
+				  	<h4 class="col-md-2 col-xs-2">Arrive Time</h4>
+				  	<h4 class="col-md-2 col-xs-2">Time</h4>
+				  	<h4 class="col-md-2 col-xs-2">Price</h4>
+				  	<h4 class="col-md-3 col-xs-3">Specibility</h4>
+				  	<h4 class="col-md-1 col-xs-1">Detail</h4>	
+				</div>
+			</div>
+			<div class="timetable_body">
+			</div>
+		</div>
+	</div>
+	  </div>
+
+	</div>
+		
 	</div>
 
 	<!--Footer-->

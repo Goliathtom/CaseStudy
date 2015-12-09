@@ -23,43 +23,44 @@
 .table>thead>tr th{
 	text-align: center;
 }
-#timetable>div>h4{
+#going_timetable>div>h4,
+#return_timetable>div>h4{
 	text-align: center;
 	color: #777;
 }
-#timetable_body>div p{
+.timetable_body>div p{
 	text-align: center;
 	margin-top: 10px;
 	line-height: 50px;
 	font-size: 18px;
 
 }
-#price_container{
+.price_container{
 	background-color: #fff;
 	z-index: 1000;
 	color: black;
 	font-weight: normal;
 	margin-bottom: 20px;
 }
-#price_table>thead>tr>th{
+.price_table>thead>tr>th{
 	text-align: center;
 	padding-bottom: 20px;
 	padding-top: 20px;
 	font-size: 1.5em;
 }
-#price_table>thead>tr>th:nth-child(2){
+.price_table>thead>tr>th:nth-child(2){
 	border-bottom: 10px solid #EF0000;
 }
-#price_table>thead>tr>th:nth-child(3){
+.price_table>thead>tr>th:nth-child(3){
 	border-bottom: 10px solid #EFBC00;
 }
-#price_table>thead>tr>th:nth-child(4){
+.price_table>thead>tr>th:nth-child(4){
 	border-bottom: 10px solid #1DBF00;
 }
-#price_table>thead>tr>th:nth-child(5){
+.price_table>thead>tr>th:nth-child(5){
 	border-bottom: 10px solid #0078BF;
 }
-#price_table>tbody>tr>td:nth-child(1){
+.price_table>tbody>tr>td:nth-child(1){
 	padding-right: 20px;
 	width: 15em;
 	font-weight: bold;
@@ -82,14 +83,32 @@
 	background-color: #D40000;
 	color: #fff;
 }
-#buyticket_container{
+.buyticket_container{
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
-#buyticket_container>span{
+.buyticket_container>span{
 	line-height: 40px;
 }
 .active{
 	background-color: #f00;
 	color: #fff;	
+}
+#tab_container>ul>li.active,
+#tab_container>ul>li.active>a{
+	background-color: #f00;
+	color: #fff;
+	margin-left:-2px;
+}
+#tab_container>ul>li{
+	margin-left: 0;
+}
+#tab_container>ul>li>a{
+	background-color: #fff;
+	color: #000;
+	margin-left:-2px;
+}
+#tab_container>div:nth-child(2)>.active{
+	background-color: #fff;
+	color: #000;
 }

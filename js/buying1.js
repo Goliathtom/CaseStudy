@@ -3,23 +3,32 @@ var searchinfo;
 $(document).ready(function(){
 	$( document ).tooltip();
 	console.log(searchinfo);
+	
 	MakeTable();
 	console.log(trainlist);
-	MakeTrainTable();
+	MakeTrainTable(0);
+
+	$('#trip_tab a').click(function (e){
+	  e.preventDefault();
+	  console.log($(this).attr("href") + "  " + $(this).attr("aria-control"));
+	  $(this).tab('show');
+	});
+
 	// searchinfo = GetDataQuery();
 	$(".detail_btn").click(function(){
-		$("#timetable_body").find("#price_container").remove();
-		$("#timetable_body").find(".activeitem").addClass("items");
-		$("#timetable_body").find(".activeitem").removeClass("activeitem");
+		var table_body=$(this).closest(".timetable_body");
+		table_body.find(".price_container").remove();
+		table_body.find(".activeitem").addClass("items");
+		table_body.find(".activeitem").removeClass("activeitem");
 
 		$(this).parent().parent().addClass("activeitem");
 		$(this).parent().parent().removeClass("items");
 
-		var detail_string="<div id='price_container' class='col-md-12 col-xs-12'>";
-		detail_string+=		"<table id='price_table' class='col-md-12 col-xs-12'>";
+		var detail_string="<div class='price_container col-md-12 col-xs-12'>";
+		detail_string+=		"<table class='price_table col-md-12 col-xs-12'>";
 		detail_string+=			"<thead>";
 		detail_string+=				"<tr><th></th><th>Promo</th><th>Ida y Vuelta</th><th>Promo+</th><th>Flexible</th</t</thead>";
-		detail_string+=			"<tbody id='price_body'>";
+		detail_string+=			"<tbody class='price_body'>";
 		detail_string+=				"<tr>";
 		detail_string+=					"<td>Turismo</td>";
 		detail_string+=					"<td class='ticket'>55</td>";
@@ -43,28 +52,27 @@ $(document).ready(function(){
 		detail_string+=				"</tr>";
 		detail_string+=			"</tbody>";
 		detail_string+=		"</table>";
-		detail_string+=		"<div id='buyticket_container' class='col-md-12 col-xs-12'>";
+		detail_string+=		"<div class='buyticket_container col-md-12 col-xs-12'>";
 		detail_string+=			"<span class='col-md-10 col-xs-10'><a href='#'>Have you discount code?</a></span>";
-		detail_string+=			"<button id='buy_btn' class='col-xs-2 col-md-2 btn btn-default btn-lg'>Buy</button>";
+		detail_string+=			"<button class='buy_btn col-xs-2 col-md-2 btn btn-default btn-lg'>Buy</button>";
 		detail_string+=		"</div>";
 		detail_string+=	"</div>";
 
 		$(this).parent().parent().append(detail_string);
 
 		$(".ticket").click(function(){
-			$("#price_body").find(".checked").removeClass("checked");
+			$(this).parent().parent().find(".checked").removeClass("checked");
 			$(this).addClass("checked");
 		});
 
-		$("#buy_btn").click(function(){
-			console.log("click");
+		$(".buy_btn").click(function(){
 			location.replace("buying4.html");
 		});
 	});
 
 	// console.log(searchinfo);
 });
-  function MakeTrainTable(){
+  function MakeTrainTable(trip_flag){
   	//$("#timetable").find("tbody").children().remove();
   	var string="<button class='btn btn-default detail_btn'><span class='glyphicon glyphicon-menu-down' aria-hidden='true'></span></button>";
   	for(var i=0;i<trainlist.length;i++){
@@ -98,5 +106,5 @@ $(document).ready(function(){
 	  	string+="<p class='col-md-1 col-xs-1'>"+trainlist[i].detail+"</p></div>";
 	  }
 
-  	$("#timetable_body").append(string);
+  	$(".timetable_body").append(string);
   }

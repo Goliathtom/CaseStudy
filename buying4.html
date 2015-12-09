@@ -124,6 +124,8 @@
 	<!-- Body -->
 	<div id="body" class="row">
 		<div id="info_container" class="col-md-10 col-md-offset-1 col-xs-12">
+			<div>
+			<label>Trip Information</label>
 			<table id="info_table" class="col-md-12 col-xs-12 buying_table">
 				<thead>
 					<tr>
@@ -142,7 +144,10 @@
 			    	</tr>
 				</tbody>
 	  		</table>
-	  		<table class="col-md-12 col-xs-12 buying_table">
+	  		</div>
+	  		<div>
+	  		<label>Going Train Information</label>
+	  		<table id="going_table" class="col-md-12 col-xs-12 buying_table">
 				<thead class="thead">
 					<tr>
 						<th class="col-md-2 col-xs-2"><h2>Time</h2></th>
@@ -161,6 +166,29 @@
 			    	</tr>
 				</tbody>
 			</table>
+			</div>
+	  		<div>
+	  		<label>Return Train Information</label>
+			<table id="return_table" class="col-md-12 col-xs-12 buying_table">
+				<thead class="thead">
+					<tr>
+						<th class="col-md-2 col-xs-2"><h2>Time</h2></th>
+						<th class="col-md-2 col-xs-2"><h2>Duration</h2></th>
+						<th class="col-md-4 col-xs-4"><h2>Class</h2></th>
+						<th class="col-md-4 col-xs-4"><h2>Price</h2></th>
+					</tr>
+					
+				</thead>
+				<tbody class="tbody">
+					<tr>
+						<td class="col-md-2 col-xs-2">hh:mm <br>>hh:mm</td>
+			    		<td class="col-md-2 col-xs-2">2h 24m</td>
+			    		<td class="col-md-4 col-xs-4">Turismo <br>Promo</td>
+			    		<td class="col-md-4 col-xs-4">Euro 55</td>
+			    	</tr>
+				</tbody>
+			</table>
+		</div>
 		</div>
 		<div id="cinfo_container" class="col-xs-12 col-md-10 col-md-offset-1">
 			<form class="form-horizontal col-md-12 col-xs-12 buying_table">
