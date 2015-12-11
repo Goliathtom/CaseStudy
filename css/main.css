@@ -181,6 +181,15 @@ ul, li{
 .buying_table>thead>tr>th,
 .buying_table>tbody>tr>td{
 	border-right: 2px solid black;
+	padding-top: 10px;
+    padding-bottom: 10px;
+}
+.buying_table>thead>tr>th{
+	font-size: 30px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
 }
 
 @media only screen and (max-width:991px){
@@ -189,7 +198,7 @@ ul, li{
 	}
 }
 @media only screen and (max-width: 888px){
-	.float-xs-left,{
+	.float-xs-left{
 		float: left;
 		width: 100%;
 	}
