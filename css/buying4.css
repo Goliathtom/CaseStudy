@@ -58,6 +58,9 @@ ul, li{
 #buy{
     display: block;
 }
+#info_container{
+	margin-top: 5px;
+}
 #buying_container{
 	width: 100%;
 	background-color: #D40000;

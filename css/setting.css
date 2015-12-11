@@ -83,6 +83,9 @@
 	background-color: #D40000;
 	color: #fff;
 }
+.top-label{
+	margin-top: 10px;
+}
 .buyticket_container{
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -91,12 +94,12 @@
 	line-height: 40px;
 }
 .active{
-	background-color: #f00;
+	background-color: #D40000;
 	color: #fff;	
 }
 #tab_container>ul>li.active,
 #tab_container>ul>li.active>a{
-	background-color: #f00;
+	background-color: #D40000;
 	color: #fff;
 	margin-left:-2px;
 }
